@@ -5,12 +5,13 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1a1a2e;
     color: #fff;
     min-height: 100vh;
     overflow: hidden;
     touch-action: none;
+    line-height: 1.5;
 }
 
 .game-container {
@@ -50,14 +51,17 @@ body {
 }
 
 .hint-text {
-    font-size: 1.4rem;
+    font-family: 'Fredoka', 'Inter', sans-serif;
+    font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+    font-weight: 700;
     color: #ffd700;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.4);
-    letter-spacing: 2px;
+    letter-spacing: 0.03em;
     background: rgba(0, 0, 0, 0.5);
     padding: 0.8rem 1.5rem;
     border-radius: 10px;
+    text-wrap: balance;
 }
 
 .symbols-container {
@@ -90,6 +94,7 @@ body {
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: bold;
+    font-family: 'Fredoka', 'Inter', sans-serif;
     color: #fff;
     background: linear-gradient(135deg, #e94560 0%, #c73e54 100%);
     border: none;
@@ -119,6 +124,8 @@ body {
     transform: translateX(-50%);
     z-index: 3;
     font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     color: #fff;
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
@@ -145,6 +152,7 @@ body {
 }
 
 .sign {
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, rgba(45, 45, 68, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%);
     border: 2px solid #ffd700;
     border-radius: 10px;
@@ -158,6 +166,7 @@ body {
 }
 
 .sign strong {
+    font-family: 'Fredoka', 'Inter', sans-serif;
     color: #ffd700;
     font-size: 1.2rem;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
@@ -197,14 +206,16 @@ body {
 }
 
 .door-number {
+    font-family: 'Fredoka', 'Inter', sans-serif;
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #ffd700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.6);
     margin-bottom: 0.5rem;
 }
 
 .door-message {
+    font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     text-align: center;
     color: #fff;
@@ -238,12 +249,14 @@ body {
 }
 
 .lockout-message {
+    font-family: 'Fredoka', 'Inter', sans-serif;
     font-size: 1.5rem;
     color: #e94560;
     margin-bottom: 1rem;
 }
 
 .lockout-timer {
+    font-family: 'Fredoka', 'Inter', sans-serif;
     font-size: 4rem;
     font-weight: bold;
     color: #ffd700;
@@ -251,6 +264,7 @@ body {
 }
 
 .lockout-wait {
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     color: #888;
     margin-top: 1rem;
@@ -292,6 +306,7 @@ body {
 }
 
 .modal-text {
+    font-family: 'Fredoka', 'Inter', sans-serif;
     font-size: 1.2rem;
     color: #e94560;
 }
@@ -334,10 +349,14 @@ body {
 }
 
 .invite-card h1 {
-    font-size: 2rem;
+    font-family: 'Fredoka', 'Inter', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    line-height: 1.05;
+    letter-spacing: 0.02em;
     color: #ffd700;
     margin-bottom: 1.5rem;
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    text-wrap: balance;
 }
 
 .invite-details {
@@ -345,9 +364,11 @@ body {
 }
 
 .invite-details p {
+    font-family: 'Inter', sans-serif;
     font-size: 1.3rem;
     margin: 0.5rem 0;
     color: #f0f0f0;
+    line-height: 1.45;
 }
 
 .invite-details .date {
@@ -367,6 +388,17 @@ body {
     font-size: 1rem;
     color: #888;
     font-style: italic;
+    font-family: 'Inter', sans-serif;
+}
+
+.signature {
+    margin-bottom: 0.5rem;
+    font-family: 'Fredoka', 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #ffd700;
+    text-shadow: 0 0 16px rgba(255, 215, 0, 0.35);
 }
 
 /* Responsive */
@@ -385,11 +417,15 @@ body {
     }
 
     .invite-card h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .invite-details p {
         font-size: 1.1rem;
+    }
+
+    .signature {
+        font-size: 1.2rem;
     }
 
     .invite-card {
