@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Agustin's 9th Birthday Invite</title>
+    <meta property="og:title" content="Estás invitado a mi cumple de 9">
+    <meta property="og:description" content="Ayuda a resolver el misterio, encuentra las pistas y descubre la invitación de Agustín.">
+    <meta property="og:image" content="scooby-doo-bg.webp">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="lego-azul-removebg-preview.png">
+    <link rel="shortcut icon" href="lego-azul-removebg-preview.png">
     <link rel="stylesheet" href="agustin.css">
 </head>
 <body>
     <main class="invite-shell">
-        <section id="level-1" class="screen active">
+        <section id="intro" class="screen active">
             <div class="screen-copy">
-                <p class="eyebrow">Mision 1</p>
+                <p class="eyebrow">Una misión</p>
+                <h1>Hay un misterio que resolver</h1>
+                <p class="lead">Necesitamos tu ayuda para encontrar las pistas.</p>
+            </div>
+
+            <button id="start-game" class="primary-btn" type="button">Empezar</button>
+        </section>
+
+        <section id="level-1" class="screen">
+            <div class="screen-copy">
+                <p class="eyebrow">Misión 1</p>
                 <h1>El Constructor de Pistas</h1>
-                <p class="lead">Encuentra los números y símbolos en orden: 9✦ → 1● → 2▲.</p>
+                <p class="lead">Hay algo escondido detrás de los ladrillos.</p>
             </div>
 
             <div class="board">
@@ -44,7 +63,7 @@
                     <button class="brick" type="button" aria-label="Ladrillo secreto 4">
                         <img class="brick-art" src="lego-morado-removebg-preview.png" alt="">
                     </button>
-                    <div class="clue">MAP</div>
+                    <div class="clue">MAPA</div>
                 </div>
                 <div class="brick-stack" data-value="2" data-symbol="▲" data-kind="number">
                     <button class="brick" type="button" aria-label="Ladrillo secreto 5">
@@ -59,17 +78,15 @@
                     <button class="brick" type="button" aria-label="Ladrillo secreto 6">
                         <img class="brick-art" src="lego-gris-removebg-preview.png" alt="">
                     </button>
-                    <div class="clue">GO</div>
+                    <div class="clue">SCOOBY</div>
                 </div>
             </div>
-
-            <p class="hint">Pista: sigue el orden de los números y símbolos visibles.</p>
 
             <div class="code-lock" id="code-lock">
                 <div class="code-header">
                     <div>
                         <p class="eyebrow">Candado</p>
-                        <p class="code-help">Ahora escribe el codigo que descubriste.</p>
+                        <p class="code-help">Ahora escribí el código que descubriste.</p>
                     </div>
                 </div>
 
@@ -94,18 +111,51 @@
             </div>
         </section>
 
+        <section id="level-2" class="screen">
+            <div class="screen-copy">
+                <p class="eyebrow">Misión 2</p>
+                <h1>Memoria relámpago</h1>
+                <p class="lead">Mirá la secuencia y repetila tocando los colores.</p>
+            </div>
+
+            <div class="memory-stage">
+                <button id="memory-start" class="primary-btn" type="button">Iniciar</button>
+                <div class="memory-grid" id="memory-grid" aria-label="Botones de memoria">
+                    <button class="memory-pad" type="button" data-tone="red" aria-label="Rojo">
+                        <span>1</span>
+                    </button>
+                    <button class="memory-pad" type="button" data-tone="blue" aria-label="Azul">
+                        <span>2</span>
+                    </button>
+                    <button class="memory-pad" type="button" data-tone="yellow" aria-label="Amarillo">
+                        <span>3</span>
+                    </button>
+                    <button class="memory-pad" type="button" data-tone="green" aria-label="Verde">
+                        <span>4</span>
+                    </button>
+                </div>
+
+                <p class="hint" id="memory-hint">Observá la secuencia.</p>
+                <button id="memory-replay" class="secondary-btn" type="button">Ver secuencia otra vez</button>
+            </div>
+        </section>
+
         <section id="reveal" class="screen">
             <div class="confetti" aria-hidden="true"></div>
             <article class="invite-card">
-                <p class="eyebrow">Estas invitado</p>
-                <h1>Happy Birthday Agustin</h1>
+                <p class="eyebrow">Misterio resuelto</p>
+                <h1 class="invite-title">
+                    <span class="invite-intro">Estás invitado a mi cumple de</span>
+                    <span class="invite-age">9</span>
+                    <span class="invite-name">AGUSTÍN</span>
+                </h1>
                 <div class="invite-details">
                     <p><strong>Domingo 19 de Abril</strong></p>
-                    <p>12:30 horas</p>
+                    <p>12:30 - 16:30</p>
                     <p>En mi casa</p>
-                    <p>Turno de cumplir 9</p>
+                    <p>Habrá lego, snacks y misterio</p>
                 </div>
-                <button id="play-again" class="secondary-btn" type="button">Jugar de nuevo</button>
+                <button id="play-again" class="secondary-btn" type="button">Volver a jugar</button>
             </article>
         </section>
     </main>
