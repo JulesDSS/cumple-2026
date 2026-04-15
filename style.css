@@ -318,6 +318,8 @@ body {
     animation: fadeInScale 0.5s ease-out;
     z-index: 10;
     max-width: 90%;
+    position: absolute;
+    top: 15%;
 }
 
 @keyframes fadeInScale {
@@ -388,6 +390,11 @@ body {
 
     .invite-details p {
         font-size: 1.1rem;
+    }
+
+    .invite-card {
+        top: 10%;
+        padding: 1.5rem;
     }
 
     #level-1, #level-2, #reveal {
