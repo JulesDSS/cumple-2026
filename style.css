@@ -34,7 +34,7 @@ body {
 
 /* Level 1: Flashlight */
 #level-1 {
-    background: url('dungeon.png') center/cover no-repeat;
+    background: url('dungeon.webp') center/cover no-repeat;
     background-color: #0f0f23;
 }
 
@@ -130,7 +130,7 @@ body {
 
 /* Level 2: Three Doors */
 #level-2 {
-    background: url('doors.png') center/cover no-repeat;
+    background: url('doors.webp') center/cover no-repeat;
     background-color: #1a1a2e;
 }
 
@@ -174,7 +174,7 @@ body {
 .door {
     width: 140px;
     height: 200px;
-    background: url('door.png') center/cover no-repeat;
+    background: url('door.webp') center/cover no-repeat;
     background-color: #4a3728;
     border: none;
     border-radius: 8px;
@@ -298,7 +298,7 @@ body {
 
 /* Final Reveal */
 #reveal {
-    background: url('party.png') center/cover no-repeat;
+    background: url('party.webp') center/cover no-repeat;
     background-color: #1a1a2e;
 }
 
@@ -388,5 +388,10 @@ body {
 
     .invite-details p {
         font-size: 1.1rem;
+    }
+
+    #level-1, #level-2, #reveal {
+        background-position: center center;
+        background-size: cover;
     }
 }
