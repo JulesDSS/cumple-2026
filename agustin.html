@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Agustin's 9th Birthday Invite</title>
+    <link rel="stylesheet" href="agustin.css">
+</head>
+<body>
+    <main class="invite-shell">
+        <section id="level-1" class="screen active">
+            <div class="screen-copy">
+                <p class="eyebrow">Mision 1</p>
+                <h1>El Constructor de Pistas</h1>
+                <p class="lead">Encuentra los números y símbolos en orden: 9✦ → 1● → 2▲.</p>
+            </div>
+
+            <div class="board">
+                <div class="brick-stack" data-value="9" data-symbol="✦" data-kind="number">
+                    <button class="brick" type="button" aria-label="Ladrillo secreto 1">
+                        <img class="brick-art" src="lego-rojo-removebg-preview.png" alt="">
+                    </button>
+                    <div class="clue clue-number symbol" data-order="1">
+                        <span class="clue-value">9</span>
+                        <span class="clue-symbol" aria-hidden="true">✦</span>
+                    </div>
+                </div>
+                <div class="brick-stack" data-value="snack" data-kind="decoy">
+                    <button class="brick" type="button" aria-label="Ladrillo secreto 2">
+                        <img class="brick-art" src="lego-blanco-removebg-preview.png" alt="">
+                    </button>
+                    <div class="clue">SNACK</div>
+                </div>
+                <div class="brick-stack" data-value="1" data-symbol="●" data-kind="number">
+                    <button class="brick" type="button" aria-label="Ladrillo secreto 3">
+                        <img class="brick-art" src="lego-azul-removebg-preview.png" alt="">
+                    </button>
+                    <div class="clue clue-number symbol" data-order="2">
+                        <span class="clue-value">1</span>
+                        <span class="clue-symbol" aria-hidden="true">●</span>
+                    </div>
+                </div>
+                <div class="brick-stack" data-value="map" data-kind="decoy">
+                    <button class="brick" type="button" aria-label="Ladrillo secreto 4">
+                        <img class="brick-art" src="lego-morado-removebg-preview.png" alt="">
+                    </button>
+                    <div class="clue">MAP</div>
+                </div>
+                <div class="brick-stack" data-value="2" data-symbol="▲" data-kind="number">
+                    <button class="brick" type="button" aria-label="Ladrillo secreto 5">
+                        <img class="brick-art" src="lego-verde-removebg-preview.png" alt="">
+                    </button>
+                    <div class="clue clue-number symbol" data-order="3">
+                        <span class="clue-value">2</span>
+                        <span class="clue-symbol" aria-hidden="true">▲</span>
+                    </div>
+                </div>
+                <div class="brick-stack" data-value="go" data-kind="decoy">
+                    <button class="brick" type="button" aria-label="Ladrillo secreto 6">
+                        <img class="brick-art" src="lego-gris-removebg-preview.png" alt="">
+                    </button>
+                    <div class="clue">GO</div>
+                </div>
+            </div>
+
+            <p class="hint">Pista: sigue el orden de los números y símbolos visibles.</p>
+
+            <div class="code-lock" id="code-lock">
+                <div class="code-header">
+                    <div>
+                        <p class="eyebrow">Candado</p>
+                        <p class="code-help">Ahora escribe el codigo que descubriste.</p>
+                    </div>
+                </div>
+
+                <div class="code-display" aria-label="Codigo ingresado">
+                    <div class="code-slot" data-symbol="✦" aria-label="Casilla para el símbolo estrella">
+                        <input class="code-input" type="text" inputmode="numeric" maxlength="1" autocomplete="off" aria-label="Ingresa el numero del simbolo estrella">
+                    </div>
+                    <div class="code-slot" data-symbol="●" aria-label="Casilla para el símbolo círculo">
+                        <input class="code-input" type="text" inputmode="numeric" maxlength="1" autocomplete="off" aria-label="Ingresa el numero del simbolo circulo">
+                    </div>
+                    <div class="code-slot" data-symbol="▲" aria-label="Casilla para el símbolo triángulo">
+                        <input class="code-input" type="text" inputmode="numeric" maxlength="1" autocomplete="off" aria-label="Ingresa el numero del simbolo triangulo">
+                    </div>
+                </div>
+
+                <div class="code-actions">
+                    <button class="key key-clear" type="button" id="clear-code">Reiniciar</button>
+                    <button class="key key-enter" type="button" id="submit-code">Abrir el candado</button>
+                </div>
+
+                <div id="wrong-banner" class="wrong-banner hidden">Scooby snack! Intenta otra vez.</div>
+            </div>
+        </section>
+
+        <section id="reveal" class="screen">
+            <div class="confetti" aria-hidden="true"></div>
+            <article class="invite-card">
+                <p class="eyebrow">Estas invitado</p>
+                <h1>Happy Birthday Agustin</h1>
+                <div class="invite-details">
+                    <p><strong>Domingo 19 de Abril</strong></p>
+                    <p>12:30 horas</p>
+                    <p>En mi casa</p>
+                    <p>Turno de cumplir 9</p>
+                </div>
+                <button id="play-again" class="secondary-btn" type="button">Jugar de nuevo</button>
+            </article>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="agustin.js"></script>
+</body>
+</html>
